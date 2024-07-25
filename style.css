@@ -1,0 +1,207 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #063d61;
+    background-image: linear-gradient(to top, rgb(30, 64, 144), rgb(146, 52, 190) );
+    /* color: black; */
+  }
+  .background-container {
+    position: relative; /* Enable positioning for child elements */
+    background-image: url("C:\Users\futur\seph\icon.jpg"); /* Set your icon image */
+    background-repeat: repeat; /* Repeat the icon throughout the background */
+    min-height: 100vh; /* Ensure background covers viewport height */
+    background: linear-gradient(to right, #f0f0f0 0%, #e0e0e0 20%, #f0f0f0 40%, #e0e0e0 60%, #f0f0f0 80%, #e0e0e0 100%);
+  }
+  
+  .background-container .content { /* Optional class for your page content */
+    position: relative; /* Allow content to be positioned above background */
+    padding: 20px; /* Add some padding for separation */
+  }
+  #headline{
+    font-weight: 100px;
+    padding: 10px;
+    color: white;
+    background-image: linear-gradient(to top, rgb(30, 64, 144), rgb(146, 52, 190));
+    font-style:bold;
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    width: 96.8%;
+    top: -21px;
+    clip-path: inset(0 100% 0 0); /* Initially hide all text */
+    animation: textReveal 3s ease-in-out forwards; /* Animation properties */
+    
+  }
+  @keyframes textReveal {
+    from { clip-path: inset(0 100% 0 0); } /* Start hidden */
+    to { clip-path: inset(0 0 0 0); } /* Reveal all text */
+    
+  }
+  #history{
+    background-image: linear-gradient(to left, rgb(30, 64, 144), rgb(146, 52, 190) );
+    color: white;
+  }
+  /* h1#headline {
+    animation: fadeIn 2s ease-in-out; /* Animation name, duration, timing function */
+  
+  
+  /* @keyframes fadeIn {
+    from { opacity: 0; } /* Start from invisible */
+    /* to { opacity: 1; } End fully visible */
+   */ */
+  #transactionform{
+    display: flex;
+    
+  }
+  #category, #amount, #others{
+    margin-right: 10px;  /* Add margin between elements */
+    padding: 10px;  /* Add padding for better spacing */
+    border: 1px solid #ccc;  /* Add a thin border */
+    border-radius: 50px;  /* Add rounded corners */
+    background-color: rgb(137, 83, 213);
+    color: white;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+    width: 100px; 
+  }
+  #filter-category{
+    background-color: rgb(137, 83, 213);
+    color: black;
+    
+    margin: 0 auto;
+    border-radius: 50px;
+    text-align: center;
+    cursor: pointer;
+  }
+  #amount {
+    width: 100px;  /* Set a fixed width for the amount input */
+    background-color: rgb(137, 83, 213);
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+    color:white;
+    
+    
+  }
+
+  button[type="submit"]{
+    background-image: linear-gradient(to right, #7f35a7, #0072ff); /* Example gradient */
+    border: none;
+    color: #fff;
+    padding: 5px 10px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 0 auto;
+
+  }
+
+  button[type="submit"]:hover{
+    background-image: linear-gradient(to right, #7f35a7, #010c1a);
+    box-shadow: 0 0 5px rgba(0,0,0,0.2);
+  }
+  #transaction-table {
+    border-collapse: collapse; /* Remove default table spacing */
+    width: 100%; /* Make the table full width */
+    margin: 0 auto; /* Center the table horizontally */
+    margin-top: 50px;
+  }
+  
+  #transaction-table th, #transaction-table td {
+    border: 1px solid #ddd; /* Add a thin gray border */
+    padding: 10px; /* Add some padding for spacing */
+    text-align: left; /* Align text to the left */
+  }
+  #history-table th{
+      font-weight: bold;
+      background-color: #ad8eae;
+
+  }
+  #transaction-table th {
+    background-color:#ad8eae; /* Light gray background for headers */
+    font-weight: bold; /* Bold text for headers */
+  }
+  
+  #transaction-table tfoot {
+    font-weight: bold; /* Bold text for footer row */
+  }
+  
+  #totalamount {
+    text-align: right; /* Align total amount to the right */
+  }
+  
+  .container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  form input, form select{
+    padding: 10px;
+    margin: 5px;
+    width: 80%;
+  }
+  
+  form button {
+    padding: 10px 20px;
+    margin-top: 10px;
+  }
+  
+  /* table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 50px;
+    border: 1px solid black; 
+} */
+    
+    /* th, td {
+    border: 1px solid black; 
+    padding: 5px;
+    text-align: center;
+  }  */
+  
+  thead {
+    background-color: #f2f2f2;
+  }  
+ 
+  .deletebtn {
+    background-color: transparent; /* Remove default button background */
+    color: #f00; /* Red color for the cross */
+    font-size: 16px; /* Adjust size as needed */
+    cursor: pointer; /* Change cursor to pointer on hover */
+    border: none; /* Remove default button border */
+    padding: 0 20px; /* Remove default button padding */
+    margin: 0;
+    justify-content: flex-end; 
+    position: absolute;
+  }
+  #view-history, #close-history {
+    padding: 10px 20px;
+    margin: 10px auto;
+    border: none;
+    border-radius: 4px;
+    background-color: #3498db; /* Blue */
+    color: white;
+    cursor: pointer;
+    display: block;
+  }
+  #view-history:hover
+  {
+    
+    background-image: linear-gradient(to right, rgb(36, 116, 162), #010c1a);
+  }
+  #close-history {
+    margin-top: 10px;
+    background-color: #e74c3c; 
+  
+}
+  #close-history:hover{
+    background-image: linear-gradient(to right, Red, #010c1a);
+  }
+  
+  #history-container {
+    display: none;
+    margin-top: 20px;
+  }
+  
+  #history-table {
+    width: 100%;
+    border-collapse: collapse;
+  }

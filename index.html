@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width initial-scale=1.0">
+    <title>Finance Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="background-container">
+        
+        <h1 id="headline">Personal Finance Tracker</h1>
+        <form id="transactionform">
+            <select id="category" required>
+                <option value="Groceries">Groceries</option>
+                <option value="Fuel">Fuel</option>
+                <option value="Clothes">Clothes</option>
+                <option value="Medicines">Medicines</option>
+                <option value="Rent">Rent</option>
+                <option value="Others">Others</option>
+            </select>
+            <input type="text" id="others" placeholder="Description for other" style="display:none;" onkeypress="return /[a-zA-Z\s]/.test(event.key)">
+            <input type="number" step="0.01" id="amount" placeholder="Amount" required>
+            <button type="submit">Add Transaction</button>
+        
+        </form>
+        <table id="transaction-table">
+            <thread>
+                <tr>
+                    <th>Category</th>
+                    <th>Amount</th>   
+                </tr>
+            </thread>
+            <tbody id="transaction-list"></tbody>
+            <tfoot>
+                <tr>
+                    <td><strong>Total Amount : </strong></td>
+                    <td id="totalamount">Rs 0.00</td>
+                </tr>
+            </tfoot>
+        </table>
+        <button id="view-history">View History</button>
+        <div id="history-container" style="display: none;">
+            <h2 id="history">Transaction History</h2>
+            <table id="history-table">
+                <thead>
+                    <tr>
+                        <th>Category
+                            <select id="filter-category">
+                                <option value="All">All</option>
+                                <option value="Groceries">Groceries</option>
+                                <option value="Fuel">Fuel</option>
+                                <option value="Clothes">Clothes</option>
+                                <option value="Medicines">Medicines</option>
+                                <option value="Rent">Rent</option>
+                                <option value="Others">Others</option>
+                            </select>
+                        </th>
+                        <th>Amount</th>
+                        <th>Date</th>
+                    </tr>
+                    
+                </thead>
+                <tbody id="historybody"></tbody>
+                <tfoot>
+                    <tr>
+                        <td><strong>Total Amount : </strong></td>
+                        <td id="totalamount1">Rs 0.00</td>
+                    </tr>
+                </tfoot>
+            </table>
+        <button id="close-history">Close History</button>
+        </div>
+    </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
